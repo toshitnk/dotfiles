@@ -1,0 +1,97 @@
+imap <C-p><C-L> \RequirePackage{plautopatch}<LF>
+\\documentclass[english, dvipdfmx, a4paper]{jsarticle}<LF>
+\\usepackage[utf8]{inputenc}<LF>
+\\usepackage[top=10truemm, bottom=20truemm, left=15truemm, right=15truemm]{geometry} % mergin<LF>
+\\renewcommand{\headfont}{\bfseries}<LF>
+\<LF>
+\% graphics<LF>
+\\usepackage{graphicx}<LF>
+\\usepackage{here}<LF>
+\<LF>
+\% link<LF>
+\<LF>
+\\usepackage{url}<LF>
+\\usepackage[dvipdfmx, linktocpage]{hyperref} <LF>
+\\usepackage{xcolor}<LF>
+\\usepackage{pxjahyper}<LF>
+\\hypersetup{<LF>
+\	colorlinks=true,<LF>
+\	citecolor=blue,<LF>
+\	linkcolor=teal,<LF>
+\	urlcolor=orange,<LF>
+\}<LF>
+\<LF>
+\% math<LF>
+\<LF>
+\\usepackage{amsmath, amssymb} <LF>
+\\usepackage{physics}<LF>
+\\usepackage{mathrsfs}<LF>
+\\usepackage{mathtools}<LF>
+\<LF>
+\% theoremstyle<LF>
+\\usepackage{amsthm}<LF>
+\\newtheoremstyle{break}<LF>
+\{\topsep}{\topsep}%<LF>
+\{}{}%<LF>
+\{\bfseries}{}%<LF>
+\{\newline}{}%<LF>
+\\theoremstyle{break}<LF>
+\\newtheorem{thm}{Theorem}[section]<LF>
+\\newtheorem{defn}[thm]{Definition}<LF>
+\\newtheorem{eg}[thm]{Example}<LF>
+\\newtheorem{cl}[thm]{Claim}<LF>
+\\newtheorem{cor}[thm]{Corollary}<LF>
+\\newtheorem{fact}[thm]{Fact}<LF>
+\\newtheorem{rem}[thm]{Remark}<LF>
+\\newtheorem{prob}{Problem}[section]<LF>
+\<LF>
+\\makeatletter<LF>
+\\newenvironment{pr}[1][\proofnam]{\par<LF>
+\\topsep6\p@\@plus6\p@ \trivlist<LF>
+\\item[\hskip\labelsep{\itshape #1}\@addpunct{\bfseries}]\ignorespaces<LF>
+\}{%<LF>
+\\endtrivlist<LF>
+\}<LF>
+\\newcommand{\proofnam}{\underline{Derivation.}}<LF>
+\\makeatother<LF>
+\<LF>
+\<LF>
+\% my command<LF>
+\<LF>
+\\newcommand{\R}{\mathbb{R}}<LF>
+\\newcommand{\C}{\mathbb{C}}<LF>
+\\newcommand{\Z}{\mathbb{Z}}<LF>
+\<LF>
+\\newcommand{\eq}[1]{Eq. \eqref{#1}}<LF>
+\\newcommand{\theorem}[1]{Thm. \ref{#1}}<LF>
+\\newcommand{\definition}[1]{Def. \ref{#1}}<LF>
+\\newcommand{\proposition}[1]{Prop. \ref{#1}}<LF>
+\\newcommand{\example}[1]{e.g.\ref{#1}}<LF>
+\\newcommand{\claim}[1]{Cl. \ref{#1}}<LF>
+\\newcommand{\corolary}[1]{Cor. \ref{#1}}<LF>
+\\newcommand{\remark}[1]{Rem. \ref{#1}}<LF>
+\\newcommand{\problem}[1]{Prob. \ref{#1}}<LF>
+\\newcommand{\slashed}[1]{#1\!\!\!/}<LF>
+\\renewcommand{\O}{\mathcal{O}}<LF>
+\<LF>
+\<LF>
+\% number<LF>
+\<LF>
+\%\makeatletter<LF>
+\%\@addtoreset{equation}{section}<LF>
+\%\makeatother<LF>
+\%\numberwithin{equation}{section}<LF>
+\%\renewcommand{\thefootnote}{\roman{footnote}.}<LF>
+\%\renewcommand{\appendixname}{Appendix }<LF>
+\<LF>
+\\title{}<LF>
+\\author{Toshiya Tanaka}<LF>
+\\date{\today}<LF>
+\<LF>
+\\begin{document}<LF>
+\	\maketitle<LF>
+\<LF>
+\	%\bibliography{}<LF>
+\	%\bibliographystyle{ytamsalpha}<LF>
+\	%\bibliographystyle{ytamsbeta}<LF>
+\\end{document}<LF>
