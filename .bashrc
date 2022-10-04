@@ -138,7 +138,7 @@ shopt -s cdspell
 # bibtexのpath
 export BIBINPUTS=$BIBINPUTS:~/tex/bibtex/
 export BSTINPUTS=$BSTINPUTS:/usr/local/share/texmf/
-
+export TEXMFLOCAL=$TEXMFLOCAL:~/tex/sty/
 # dictionary
 function ej() {
 	grep $1 ~/app/dict/gene.txt -A 1 -wi --color

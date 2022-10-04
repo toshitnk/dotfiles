@@ -11,12 +11,10 @@ set cursorline
 
 set virtualedit=onemore
 
+set shiftwidth=4
 set smartindent
-
-
 nnoremap j gj
 nnoremap k gk
-
 
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
@@ -76,72 +74,87 @@ endif
 
 
 
-"dein Scripts-----------------------------
-if &compatible
-  set nocompatible               " Be iMproved
-endif
+" begin vimplug
 
-" Required:
-set runtimepath+=/home/usagi/.cache/dein/repos/github.com/Shougo/dein.vim
-
-" Required:
-call dein#begin('/home/usagi/.cache/dein')
-
-" Let dein manage dein
-" Required:
-call dein#add('/home/usagi/.cache/dein/repos/github.com/Shougo/dein.vim')
-
-" Add or remove your plugins here like this:
-"call dein#add('Shougo/neosnippet.vim')
-"call dein#add('Shougo/neosnippet-snippets')
-"call dein#add('neoclide/coc.nvim', {'merged':0, 'rev': 'release'})
-
-" TeX
-call dein#add('lervag/vimtex')
-let g:vimtex_quickfix_open_on_warning = 0
-
-
-
-" Julia
-
-call dein#add("JuliaEditorSupport/julia-vim")
-
-" twitter 
-call dein#add("twitvim/twitvim")
-let twitvim_enable_python = 1
-let twitvim_browser_cmd = 'firefox'
-let twitvim_force_ssl = 1
-let twitvim_count = 40
-
-
-" color scheme
-
-"call dein#add('tomasr/molokai')
-"colorscheme molokai
-
-" 括弧の補完
-call dein#add("Townk/vim-autoclose")
-
-" html
-call dein#add("mattn/emmet-vim")
-
-call dein#add("kannokanno/previm")
+call plug#begin()
+Plug 'mattn/emmet-vim'
+Plug 'lervag/vimtex'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'kannokanno/previm'
 let g:previm_open_cmd = 'firefox'
 let g:preview_markdown_vertical = 1
 
-" Required:
-call dein#end()
+call plug#end()
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 
-" Required:"
-filetype plugin indent on
-syntax enable
+" end vimplug
 
-" If you want to install not installed plugins on startup.
-"if dein#check_install()
-"  call dein#install()
+"dein Scripts-----------------------------
+"if &compatible
+"  set nocompatible               " Be iMproved
 "endif
 
-"End dein Scripts-------------------------
+"" Required:
+"set runtimepath+=/home/usagi/.cache/dein/repos/github.com/Shougo/dein.vim
+"
+"" Required:
+"call dein#begin('/home/usagi/.cache/dein')
+"
+"" Let dein manage dein
+"" Required:
+"call dein#add('/home/usagi/.cache/dein/repos/github.com/Shougo/dein.vim')
+"
+"" Add or remove your plugins here like this:
+""call dein#add('Shougo/neosnippet.vim')
+""call dein#add('Shougo/neosnippet-snippets')
+"call dein#add('neoclide/coc.nvim', {'merged':0, 'rev': 'release'})
+"
+"" TeX
+"call dein#add('lervag/vimtex')
+"let g:vimtex_quickfix_open_on_warning = 0
+"
+"
+"
+"" Julia
+"
+"call dein#add("JuliaEditorSupport/julia-vim")
+"
+"" twitter 
+"call dein#add("twitvim/twitvim")
+"let twitvim_enable_python = 1
+"let twitvim_browser_cmd = 'firefox'
+"let twitvim_force_ssl = 1
+"let twitvim_count = 40
+"
+"
+"" color scheme
+"
+""call dein#add('tomasr/molokai')
+""colorscheme molokai
+"
+"" 括弧の補完
+"call dein#add("Townk/vim-autoclose")
+"
+"" html
+"call dein#add("mattn/emmet-vim")
+"
+"call dein#add("kannokanno/previm")
+"let g:previm_open_cmd = 'firefox'
+"let g:preview_markdown_vertical = 1
+"
+"" Required:
+"call dein#end()
+"
+"" Required:"
+"filetype plugin indent on
+"syntax enable
+"
+"" If you want to install not installed plugins on startup.
+""if dein#check_install()
+""  call dein#install()
+""endif
+"
+""End dein Scripts-------------------------
 
 "バックアップファイルなどの保存場所
 set backupdir=~/Documents/vim_buckup
@@ -172,5 +185,9 @@ augroup END
 
 let g:coc_disable_startup_warning = 1
 " tex
-inoremap $ $ $<LEFT><LEFT>
 
+set nocompatible
+
+inoremap {<Enter> {}<Left><CR><ESC>hx<S-o>
+inoremap [<Enter> []<Left><CR><ESC><S-o>
+inoremap (<Enter> ()<Left><CR><ESC><S-o>
