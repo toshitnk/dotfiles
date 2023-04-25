@@ -172,22 +172,29 @@ hi SpecialKey ctermbg=None ctermfg=60
 
 
 
-
-" templates ---------------------------------
-augroup templateGroup
-autocmd!
-autocmd BufNewFile *.tex :0r ~/.vim/template/latex.tex
-autocmd BufNewFile *.beamer.tex :0r ~/.vim/template/beamer.tex
-autocmd BufNewFile *.cpp :0r ~/.vim/template/cpp.txt
-autocmd BufNewFile *.html :0r ~/.vim/template/html.html
-autocmd BufNewFile *.f :0r ~/.vim/template/fortran77.f
-augroup END
-
+"
+"" templates ---------------------------------
+"augroup templateGroup
+"autocmd!
+"autocmd BufNewFile *.tex :0r ~/.vim/template/latex.tex
+"autocmd BufNewFile *.beamer.tex :0r ~/.vim/template/beamer.tex
+"autocmd BufNewFile *.cpp :0r ~/.vim/template/cpp.txt
+"autocmd BufNewFile *.html :0r ~/.vim/template/html.html
+"autocmd BufNewFile *.f :0r ~/.vim/template/fortran77.f
+"augroup END
+"
 let g:coc_disable_startup_warning = 1
+let g:vimtex_quickfix_open_on_warning = 0
+
 " tex
 
 set nocompatible
 
-inoremap {<Enter> {}<Left><CR><ESC>hx<S-o>
+inoremap { {}<LEFT>
+inoremap ( ()<LEFT>
+inoremap [ []<LEFT>
+inoremap $ $$<LEFT>
+inoremap " ""<LEFT>
+inoremap {<Enter> {}<Left><CR><ESC><S-o>
 inoremap [<Enter> []<Left><CR><ESC><S-o>
 inoremap (<Enter> ()<Left><CR><ESC><S-o>

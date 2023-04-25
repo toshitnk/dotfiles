@@ -1,4 +1,4 @@
-imap <C-p><C-L> \RequirePackage{plautopatch}<LF>
+iabbrev preamble \RequirePackage{plautopatch}<LF>
 \\documentclass[english, dvipdfmx, a4paper]{jsarticle}<LF>
 \\usepackage[utf8]{inputenc}<LF>
 \\usepackage[top=10truemm, bottom=20truemm, left=15truemm, right=15truemm]{geometry} % mergin<LF>
@@ -56,23 +56,6 @@ imap <C-p><C-L> \RequirePackage{plautopatch}<LF>
 \\makeatother<LF>
 \<LF>
 \<LF>
-\% my command<LF>
-\<LF>
-\\newcommand{\R}{\mathbb{R}}<LF>
-\\newcommand{\C}{\mathbb{C}}<LF>
-\\newcommand{\Z}{\mathbb{Z}}<LF>
-\<LF>
-\\newcommand{\eq}[1]{Eq. \eqref{#1}}<LF>
-\\newcommand{\theorem}[1]{Thm. \ref{#1}}<LF>
-\\newcommand{\definition}[1]{Def. \ref{#1}}<LF>
-\\newcommand{\proposition}[1]{Prop. \ref{#1}}<LF>
-\\newcommand{\example}[1]{e.g.\ref{#1}}<LF>
-\\newcommand{\claim}[1]{Cl. \ref{#1}}<LF>
-\\newcommand{\corolary}[1]{Cor. \ref{#1}}<LF>
-\\newcommand{\remark}[1]{Rem. \ref{#1}}<LF>
-\\newcommand{\problem}[1]{Prob. \ref{#1}}<LF>
-\\newcommand{\slashed}[1]{#1\!\!\!/}<LF>
-\\renewcommand{\O}{\mathcal{O}}<LF>
 \<LF>
 \<LF>
 \% number<LF>
@@ -95,3 +78,32 @@ imap <C-p><C-L> \RequirePackage{plautopatch}<LF>
 \	%\bibliographystyle{ytamsalpha}<LF>
 \	%\bibliographystyle{ytamsbeta}<LF>
 \\end{document}<LF>
+
+
+iabbrev mycommand
+			\	% ordinary<LF>
+			\	\newcommand{\R}{\mathbb{R}}<LF>
+			\	\newcommand{\C}{\mathbb{C}}<LF>
+			\	\newcommand{\Z}{\mathbb{Z}}<LF>
+			\	<LF>
+			\	<LF>
+			\	% Physics %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%<LF>
+			\	<LF>
+			\	% Feynman slash<LF>
+			\	\newcommand{\slashed}[1]{#1\!\!\!/}<LF>
+			\	% order<LF>
+			\	<LF>
+			\	%Lie algebra<LF>
+			\	\renewcommand{\O}{\mathcal{O}}<LF>
+			\	\newcommand{\SO}{\mathrm{SO}}<LF>
+			\	\newcommand{\so}{\mathfrak{so}}<LF>
+			\	\newcommand{\SU}{\mathrm{SU}}<LF>
+			\	\newcommand{\su}{\mathfrak{su}}<LF>
+			\	\newcommand{\SP}{\mathrm{SP}}<LF>
+			\	\renewcommand{\sp}{\mathfrak{sp}}<LF>
+			\	\newcommand{\SL}{\mathrm{SL}}<LF>
+			\	\renewcommand{\sl}{\mathfrak{sl}}<LF>
+			\	\newcommand{\GL}{\mathrm{GL}}<LF>
+			\	\newcommand{\gl}{\mathfrak{gl}}<LF>
+			\	\newcommand{\U}{\mathrm{U}}<LF>
+			\	\renewcommand{\u}{\mathfrak{u}}<LF>
